@@ -1,0 +1,36 @@
+package youxi1;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class JRadioButtonTest{
+    JFrame f = null;
+	private Container contentPane;
+    JRadioButtonTest(){
+        f=new JFrame("单选框实例");  //创建一个JFrame的对象
+        JPanel p1=new JPanel();
+        p1.setLayout(new GridLayout(1, 3));
+        p1.setBorder(BorderFactory.createTitledBorder("选择你喜欢的城市"));
+        JRadioButton r1=new JRadioButton("北京");
+        JRadioButton r2=new JRadioButton("上海");
+        JRadioButton r3=new JRadioButton("青岛");
+        p1.add(r1);
+        p1.add(r2);
+        p1.add(r3);
+        r1.setSelected(true);
+
+
+        contentPane.add(p1);
+        f.pack();
+        f.setVisible(true);
+        f.addWindowListener(new WindowAdapter() {
+                       @Override
+            public void windowClosing(WindowEvent e) {
+                           System.exit(0);
+            }
+        });
+    }
+    public static void main(String args[]){
+        new JRadioButtonTest();
+    }
+}

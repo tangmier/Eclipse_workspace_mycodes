@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="tomcat_testing">
+        <property name="context-root" value="tomcat_testing"/>
+        <property name="java-output-path" value="/tomcat_testing/build/classes"/>
+    </wb-module>
+</project-modules>

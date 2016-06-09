@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Sun Jan 03 21:16:20 CST 2016
+org.eclipse.jst.jee.server\:tomcat_testing=D\:\\apache-tomcat-8.0.30\\wtpwebapps\\tomcat_testing
+org.eclipse.jst.jee.server\:tomcat_testingClient=D\:\\apache-tomcat-8.0.30\\wtpwebapps\\tomcat_testingClient
+org.eclipse.jst.j2ee.server\:webservice=D\:\\apache-tomcat-8.0.30\\wtpwebapps\\tomcat_testing\\WEB-INF\\lib\\webservice.jar

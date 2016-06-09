@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservice" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice" xmlns:intf="http://webservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://webservice" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="queryPlayerRank">
+    <complexType/>
+   </element>
+   <element name="queryPlayerRankResponse">
+    <complexType>
+     <sequence>
+      <element name="queryPlayerRankReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="queryPlayerNum">
+    <complexType/>
+   </element>
+   <element name="queryPlayerNumResponse">
+    <complexType>
+     <sequence>
+      <element name="queryPlayerNumReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="queryPlayerName">
+    <complexType/>
+   </element>
+   <element name="queryPlayerNameResponse">
+    <complexType>
+     <sequence>
+      <element name="queryPlayerNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readRecord">
+    <complexType/>
+   </element>
+   <element name="readRecordResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="queryPlayerRankResponse">
+
+      <wsdl:part element="impl:queryPlayerRankResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readRecordResponse">
+
+      <wsdl:part element="impl:readRecordResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryPlayerRankRequest">
+
+      <wsdl:part element="impl:queryPlayerRank" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryPlayerNumResponse">
+
+      <wsdl:part element="impl:queryPlayerNumResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryPlayerNumRequest">
+
+      <wsdl:part element="impl:queryPlayerNum" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryPlayerNameResponse">
+
+      <wsdl:part element="impl:queryPlayerNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readRecordRequest">
+
+      <wsdl:part element="impl:readRecord" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="queryPlayerNameRequest">
+
+      <wsdl:part element="impl:queryPlayerName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Services">
+
+      <wsdl:operation name="queryPlayerRank">
+
+         <wsdl:input message="impl:queryPlayerRankRequest" name="queryPlayerRankRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:queryPlayerRankResponse" name="queryPlayerRankResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryPlayerNum">
+
+         <wsdl:input message="impl:queryPlayerNumRequest" name="queryPlayerNumRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:queryPlayerNumResponse" name="queryPlayerNumResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryPlayerName">
+
+         <wsdl:input message="impl:queryPlayerNameRequest" name="queryPlayerNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:queryPlayerNameResponse" name="queryPlayerNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readRecord">
+
+         <wsdl:input message="impl:readRecordRequest" name="readRecordRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:readRecordResponse" name="readRecordResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ServicesSoapBinding" type="impl:Services">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="queryPlayerRank">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryPlayerRankRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryPlayerRankResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryPlayerNum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryPlayerNumRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryPlayerNumResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="queryPlayerName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="queryPlayerNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="queryPlayerNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readRecord">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="readRecordRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="readRecordResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ServicesService">
+
+      <wsdl:port binding="impl:ServicesSoapBinding" name="Services">
+
+         <wsdlsoap:address location="http://localhost:8080/tomcat_testing/services/Services"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

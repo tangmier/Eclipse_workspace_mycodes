@@ -1,0 +1,34 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ServicesService WSDL service -->
+
+  <service name="Services" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://webservice"/>
+      <parameter name="wsdlServiceElement" value="ServicesService"/>
+      <parameter name="schemaQualified" value="http://webservice"/>
+      <parameter name="wsdlServicePort" value="Services"/>
+      <parameter name="className" value="webservice.ServicesSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Services"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="readRecord" qname="operNS:readRecord" xmlns:operNS="http://webservice" soapAction="" >
+      </operation>
+      <operation name="queryPlayerNum" qname="operNS:queryPlayerNum" xmlns:operNS="http://webservice" returnQName="retNS:queryPlayerNumReturn" xmlns:retNS="http://webservice" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="queryPlayerName" qname="operNS:queryPlayerName" xmlns:operNS="http://webservice" returnQName="retNS:queryPlayerNameReturn" xmlns:retNS="http://webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="queryPlayerRank" qname="operNS:queryPlayerRank" xmlns:operNS="http://webservice" returnQName="retNS:queryPlayerRankReturn" xmlns:retNS="http://webservice" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="queryPlayerName queryPlayerNum readRecord queryPlayerRank"/>
+
+  </service>
+</deployment>
